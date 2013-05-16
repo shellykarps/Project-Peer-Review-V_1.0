@@ -1,0 +1,185 @@
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Review Projects</title>
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/css/bootstrap-responsive.min.css" />
+    <link rel="stylesheet" href="../Project Peer Review  V.1/assets/app.css" /> 
+</head>
+<body>
+<nav class="navbar">
+    <div class="navbar-inner">
+        <a href="#" class="brand">Project Peer Review</a>
+        <ul class="nav">
+            <li><a href="#/home">home</a></li>
+            <li><a href="#/users">users</a></li>
+            <li><a href="#/comments">comments</a></li>
+        </ul>
+    </div>
+</nav>
+<section class="container">
+    <article data-route="home" class="row">
+        <div class="span12">
+            <div class="hero-unit">
+                <h1>Project Review</h1>
+                <p>Click on <a href="#/users">users</a> to add yourself as a reviewer and <a href="#comments">comments</a> to add notes. <br> Review these projects:</br>
+                <table class="table table-striped" style="max-width: 600px">
+                    <thead>
+                    <tr>
+                        <th>Project</th>
+                        <th>Developer</th>
+                        <th>Git Hub Link</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>Project 1</td>
+                        <td>Joaquin</td>
+                        <td><a href="https://github.com/joaquin112/MDD-Project"><img src="images/github_icon.png"></a></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Project 2</td>
+                        <td>Jason</td>
+                         <td><a href="https://github.com/jay4523/MDD"><img src="images/github_icon.png"></a></td>
+                       
+                    </tr>
+                    <tr>
+                        <td>Project 3</td>
+                        <td>Melanie</td>
+                        <td><a href="https://github.com/melanieororke/mobiledevicedeployment"><img src="images/github_icon.png"></a></td>
+                      
+                    </tr>
+                    <tr>
+                        <td>Project 4</td>
+                        <td>Bill</td>
+                        <td><a href="https://github.com/wgmeirs/MDDProject.git"><img src="images/github_icon.png"></a></td>
+                       
+                    </tr>
+                    <tr>
+                        <td>Project 5</td>
+                        <td>Shelly</td>
+                        <td><a href="https://github.com/shellykarps/MDDProject"><img src="images/github_icon.png"></a></td>
+                       
+                    </tr>
+                    <tr>
+                        <td>Project 6 </td>
+                        <td>Tyler</td>
+                        <td><a href="https://github.com/tmaschino/MDD-Project"><img src="images/github_icon.png"></a></td>
+                        
+                    </tr>
+                    <tr>
+                        <td>Project 7</td>
+                        <td>Nikki</td>
+                        <td><a href="https://github.com/boonsta/MDD.git "><img src="images/github_icon.png"></a></td>
+                    </tr>
+                    <tr>
+                        <td>Project 8</td>
+                        <td>Eric</td>
+                        <td><a href="https://github.com/matrixwd/MDD"><img src="images/github_icon.png"></a></td>
+                    </tr>
+                    <tr>
+                        <td>Project 9</td>
+                        <td>Jade</td>
+                        <td><a href="https://github.com/lokilachica/PicDic"><img src="images/github_icon.png"></a></td>
+                    </tr>
+                    <tr>
+                        <td>Project 10</td>
+                        <td>Christopher</td>
+                        <td><a href="//github.com/chrispovinelli/MDDProject"><img src="images/github_icon.png"></a></td>
+                    </tr>
+                     <tr>
+                        <td>Project 11</td>
+                        <td>Mo</td>
+                        <td><a href="https://github.com/WrightMo/MDD1305"><img src="images/github_icon.png"></a></td>
+                    </tr>
+                    <tr>
+                        <td>Project 12</td>
+                        <td>Bryan</td>
+                        <td><a href="//github.com/bryansattler/mdd"><img src="images/github_icon.png"></a></td>
+                    </tr>
+                    <tr>
+                        <td>Project 13</td>
+                        <td>David</td>
+                        <td><a href="https://github.com/davidchaoFSO/MDD1305.git"><img src="images/github_icon.png"></a></td>
+                    </tr>
+                    </tbody>
+                </table>
+           
+            </div>
+        </div>
+    </article>
+        <div class="span8">
+            <ul class="data-panel"></ul>
+        </div>
+    </article>
+</section>
+
+<div id="messages"></div>
+<footer class="navbar navbar-fixed-bottom">
+    <div class="navbar-inner">
+        current route: <span data-bind="route">home</span> /
+
+    </div>
+</footer>
+
+<!--
+  ********** TEMPLATES ************
+-->
+<script type="text/template" name="data-panel">
+    <li data-name="name"></li>
+</script>
+
+<script type="text/template" name="data-panel-users">
+    <li><a href=""><span data-name="name"></span> (<span data-name="email"></span>)
+        <i class="icon-remove-sign"></i></a></li>
+</script>
+
+<script type="text/template" name="data-panel-comments">
+    <li><a href=""><span data-name="name"></span> (<span data-name="owner"></span>)
+        <i class="icon-remove-sign"></i></a></li>
+</script>
+
+<script type="text/template" name="option-template">
+    <option></option>
+</script>
+
+<script type="text/template" name="message-template">
+    <div class="alert <%- data['class'] %>">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        <%- data.txt %>
+    </div>
+</script>
+
+<!--
+  ********** LIBS ************
+-->
+<script type="text/javascript" src="http://static.firebase.com/v0/firebase.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.10.0/jquery.validate.js"></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.2.2/bootstrap.js"></script>
+
+<script type="text/javascript" src="lib/backbone.js"></script>
+<script type="text/javascript" src="lib/console-normalizer.js"></script>
+<script type="text/javascript" src="lib/underscore.string.js"></script>
+<script type="text/javascript" src="lib/backbone-firebase.js"></script>
+<script type="text/javascript" src="lib/backbone-firebase-autosync.js"></script>
+<script type="text/javascript" src="lib/Backbone.ModelBinder.js"></script>
+<script type="text/javascript" src="lib/Backbone.CollectionBinder.js"></script>
+<script type="text/javascript" src="lib/jquery.prefix.selector.js"></script>
+
+<!--
+  ********** SCRIPTS ************
+-->
+<script type="text/javascript" src="assets/templates.js"></script>
+<script type="text/javascript" src="assets/models.js"></script>
+<script type="text/javascript" src="assets/collections.js"></script>
+<script type="text/javascript" src="assets/views.js"></script>
+<script type="text/javascript" src="assets/router.js"></script>
+<script type="text/javascript" src="assets/bindings.js"></script>
+<script type="text/javascript" src="assets/app.js"></script>
+
+</body>
+</html>
